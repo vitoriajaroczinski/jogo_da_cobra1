@@ -4,13 +4,13 @@
     --verde: #4ade80;
     --verde-escuro: #16a34a;
     --verde-cabeca: #86EFAC;
-    --comida: #F87171;
+    --comida: #f87171;
     --fundo: #0a0f0a;
-    --fundo-card: #111a11;
+    --fundo-grade: #0d140d;
     --borda: #1f3320;
     --texto: #d1fae5;
     --esmaecido: #6b7280;
-    --tamanho-celular: 28px;
+    --tamanho-celula: 28px;
     --colunas: 20;
 
 }
@@ -21,7 +21,7 @@
     padding: 0;
 }
 
-body{
+body {
     font-family: "Nunito", sans-serif;
     background: var(--fundo);
     color: var(--texto);
@@ -31,73 +31,72 @@ body{
     align-items: center;
     overflow: hidden;
     user-select: none;
-}
-
-.hud {
-    width: 100%;
-    max-width: calc(var(--tamanho-celula) * var(--colunas) +4px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 0;
-    gap: 8px;
 
 }
 
-.btn-menu {
-    font-size: 0.75rem;
-    color: var(--esmaecido);
-    text-decoration: none;
-    padding: none;
-    padding: 6px 12px;
-    border: 1px solid var(--borda);
-    border-radius: 6px;
-    transition: color 0.2s, border-color 0.2s;
-    white-space: nowrap;
-}
+    .hud{
+        width: 100%;
+        max-width: calc(var(--tamanho-celula)*var(--colunas)+4px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        gap: 8px;
+    }
 
-.btn-menu:hover{
-    color: var(--verde);
-    border-color: var(--verde);
-}
+    .btn-menu{
+        font-size: 0.75rem;
+        color: var(--esmaecido);
+        text-decoration: none;
+        padding: 6px 12px;
+        border: 1px solid var(--borda);
+        border-radius: 6px;
+        transition: color 0.2s, border-color 0.2s;
+        white-space: nowrap;
+    }
 
-.hud-centro,
-.hud-direita{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .btn-menu:hover{
+        color: var(--verde);
+        border-color: var(--verde);
+    }
 
-.label-hud{
-    font-size: 0.55rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--esmaecido);
-}
+    .hud-centro,
+    .hud-direita{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.valor-hud{
-    font-family: "Press Start 2P", monospace;
-    font-size: 1rem;
-    color: var(--verde);
-    line-height: 1.4;
-}
+    .label-hud{
+        font-size: 0.55rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--esmaecido);
 
-.arena{
-    position: relative;
-}
+    }
 
-.grade{
-    display: grid;
-    grid-template-columns: repeat(var (--colunas), var(--tamanho-celula));
-    grid-template-rows: repeat(var(--colunas), var(--tamanho-celula));
-    background: var(--fundo-card);
-    border: 2px solid var(--borda);
-    border-radius: 4px;
-    gap: 1px;
-    padding: 1px;
-    background-image: 
-        linear-gradient(var(--borda) 1px, transparent 1px),
-        linear-gradient(90deg, var(--borda) 1px, transparent 1px);
-    background-size: calc(var(--tamanho-celula) + 1px) calc(var(--tamanho-celula) + 1px);
-}
+    .valor-hud{
+        font-family: "Press Start 2P";
+        font-size: 1rem;
+        color: var(--verde);
+        line-height: 1.4;
+    }
+
+    .arena{
+        position: relative;
+    }
+
+    .grade{
+        display: grid;
+        grid-template-columns: repeat(var(--colunas), var(--tamanho-celula));
+        grid-template-rows: repeat(var(--colunas), var(--tamanho-celula));
+        background: var(--fundo-grade);
+        border: 2px solid var(--borda);
+        border-radius: 4px;
+        gap: 1px;
+        padding: 1px;
+        background-image: linear-gradient(var(--borda) 1px, transparent 1px), linear-gradient(90deg, var(--borda)1px, transparent 1px);
+        background-size: calc(var(--tamanho-celula) + 1 px)calc(var(--tamanho-celula)+1px);
+
+    }
 
