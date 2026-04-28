@@ -81,3 +81,23 @@ body{
     color: var(--verde);
     line-height: 1.4;
 }
+
+.arena{
+    position: relative;
+}
+
+.grade{
+    display: grid;
+    grid-template-columns: repeat(var (--colunas), var(--tamanho-celula));
+    grid-template-rows: repeat(var(--colunas), var(--tamanho-celula));
+    background: var(--fundo-card);
+    border: 2px solid var(--borda);
+    border-radius: 4px;
+    gap: 1px;
+    padding: 1px;
+    background-image: 
+        linear-gradient(var(--borda) 1px, transparent 1px),
+        linear-gradient(90deg, var(--borda) 1px, transparent 1px);
+    background-size: calc(var(--tamanho-celula) + 1px) calc(var(--tamanho-celula) + 1px);
+}
+
